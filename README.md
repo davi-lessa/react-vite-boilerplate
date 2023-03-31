@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/assets/boiler-ico.png" alt="A website's user interface screen icon" />
+  <img src=".github/assets/boiler-icon.png" alt="A website's user interface screen icon" />
 </p>
 
 # React + Vite - boilerplate: ready to clone
