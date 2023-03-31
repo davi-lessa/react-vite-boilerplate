@@ -5,40 +5,106 @@ export const GlobalStyle = styled.createGlobalStyle`
   :root {
     --desktop-max-width: 1700px;
 
+    --primary-color: #0063db;
+    --primary-color-lighter: #deebfa;
+    --primary-color-darker: #085bbf;
+    --primary-color-contrast: white;
+    --primary-color-lighter-contrast: #0063db;
+    --primary-color-darker-contrast: white;
+
+    --secondary-color: #9362ef;
+    --secondary-color-lighter: #fde2c0;
+    --secondary-color-lighter-contrast: #af00db;
+    --secondary-color-contrast: #fff;
+
+    --tertiary-color: #cc7a00;
+    --tertiary-color-lighter: #fde7c0;
+    --tertiary-color-contrast: white;
+    --tertiary-color-lighter-contrast: black;
+
     /* Light mode */
-    --primary-color: #4285f4;
-    --secondary-color: #fbbc05;
-    --tertiary-color: #34a853;
-    --background-color: #f5f5f5;
-    --text-color: #333;
+    --background-color-light: #fff;
+    --text-color-light: #4d4d4d;
+    --text-color-lighter: #7c7c7c;
+    --text-color-darker: #1f1f1f;
 
     /* Dark mode */
-    --primary-color-dark: #66b3ff;
-    --secondary-color-dark: #ffcc33;
-    --tertiary-color-dark: #80d4a7;
-    --background-color-dark: #222;
-    --text-color-dark: #f5f5f5;
+    --background-color-dark: #0a0a0a;
+    --text-color-dark: #fff;
+    --text-color-lighter: #bdbdbd;
+    --text-color-darker: #a3a3a3;
+
+    /* Sections */
+    --section-title-fw: 600;
+
+    --section-title-fs-desktop: 58px;
+    --section-title-lh-destkop: 60px;
+    --section-title-fs-mobile: 40px;
+    --section-title-lh-mobile: 42px;
+
+    --section-p-fs: 16px;
+    --section-p-lh: 24px;
+
+    --margin-top-1: 7px;
+    --margin-top-2: 12px;
+    --margin-top-3: 16px;
   }
 
   /* Use these variables in your CSS */
   .light {
-    --primary: var(--primary-color);
-    --secondary: var(--secondary-color);
-    --tertiary: var(--tertiary-color);
-    --bg-color: var(--background-color);
-    --text-color: var(--text-color);
+    --theme-bg-color: var(--background-color-light);
+    --theme-text-color: var(--text-color-light);
   }
 
   .dark {
-    --primary: var(--primary-color-dark);
-    --secondary: var(--secondary-color-dark);
-    --tertiary: var(--tertiary-color-dark);
-    --bg-color: var(--background-color-dark);
-    --text-color: var(--text-color-dark);
+    --theme-bg-color: var(--background-color-dark);
+    --theme-text-color: var(--text-color-dark);
+  }
+
+  .primary {
+    color: var(--primary-color);
+    background-color: var(--primary-color-contrast);
+  }
+
+  .primary-lighter {
+    color: var(--primary-color-lighter-contrast);
+    background-color: var(--primary-color-lighter);
+  }
+
+  .primary-darker {
+    color: var(--primary-color-darker-contrast);
+    background-color: var(--primary-color-darker);
+  }
+
+  .secondary {
+    color: var(--secondary-color-contrast);
+    background-color: var(--secondary-color);
+  }
+
+  .tertiary {
+    color: var(--tertiary-color-contrast);
+    background-color: var(--tertiary-color);
+  }
+
+  .button {
+    display: flex;
+    width: auto;
+    height: 42px;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #0063db;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    text-decoration: none;
   }
 
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
