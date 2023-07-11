@@ -4,95 +4,19 @@ const styled = { createGlobalStyle }
 export const GlobalStyle = styled.createGlobalStyle`
   :root {
     --desktop-max-width: 1700px;
-
-    --primary-color: #0063db;
-    --primary-color-lighter: #deebfa;
-    --primary-color-darker: #085bbf;
-    --primary-color-contrast: white;
-    --primary-color-lighter-contrast: #0063db;
-    --primary-color-darker-contrast: white;
-
-    --secondary-color: #9362ef;
-    --secondary-color-lighter: #fde2c0;
-    --secondary-color-lighter-contrast: #af00db;
-    --secondary-color-contrast: #fff;
-
-    --tertiary-color: #cc7a00;
-    --tertiary-color-lighter: #fde7c0;
-    --tertiary-color-contrast: white;
-    --tertiary-color-lighter-contrast: black;
-
-    /* Light mode */
-    --background-color-light: #fff;
-    --text-color-light: #4d4d4d;
-    --text-color-lighter: #7c7c7c;
-    --text-color-darker: #1f1f1f;
-
-    /* Dark mode */
-    --background-color-dark: #0a0a0a;
-    --text-color-dark: #fff;
-    --text-color-lighter: #bdbdbd;
-    --text-color-darker: #a3a3a3;
-
-    /* Sections */
-    --section-title-fw: 600;
-
-    --section-title-fs-desktop: 58px;
-    --section-title-lh-destkop: 60px;
-    --section-title-fs-mobile: 40px;
-    --section-title-lh-mobile: 42px;
-
-    --section-p-fs: 16px;
-    --section-p-lh: 24px;
-
-    --margin-top-1: 7px;
-    --margin-top-2: 12px;
-    --margin-top-3: 16px;
   }
 
-  /* Use these variables in your CSS */
-  .light {
-    --theme-bg-color: var(--background-color-light);
-    --theme-text-color: var(--text-color-light);
+  .hover-shade:hover {
+    filter: contrast(0.2);
   }
 
-  .dark {
-    --theme-bg-color: var(--background-color-dark);
-    --theme-text-color: var(--text-color-dark);
-  }
-
-  .primary {
-    color: var(--primary-color);
-    background-color: var(--primary-color-contrast);
-  }
-
-  .primary-lighter {
-    color: var(--primary-color-lighter-contrast);
-    background-color: var(--primary-color-lighter);
-  }
-
-  .primary-darker {
-    color: var(--primary-color-darker-contrast);
-    background-color: var(--primary-color-darker);
-  }
-
-  .secondary {
-    color: var(--secondary-color-contrast);
-    background-color: var(--secondary-color);
-  }
-
-  .tertiary {
-    color: var(--tertiary-color-contrast);
-    background-color: var(--tertiary-color);
-  }
-
-  .button {
+  .button-like {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
     height: 42px;
-    padding: 0 20px;
-    justify-content: center;
-    align-items: center;
+    padding: 4px 20px;
     border-radius: 8px;
     background-color: #0063db;
     color: #fff;
@@ -101,13 +25,21 @@ export const GlobalStyle = styled.createGlobalStyle`
     font-weight: 600;
     letter-spacing: -0.1px;
     text-decoration: none;
+    cursor: pointer;
   }
 
   body {
     font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+
     background-color: var(--bg-color);
     color: var(--text-color);
+
     overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   h1 {

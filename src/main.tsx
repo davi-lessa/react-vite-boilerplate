@@ -1,14 +1,24 @@
-import React, { Profiler } from "react";
-import ReactDOM from "react-dom/client";
-import "./reset.css";
-import { GlobalStyle } from "./GlobalStyle";
-import AppRouter from "./routes/routes";
+import React, { Profiler } from 'react'
+import ReactDOM from 'react-dom/client'
+import './reset.css'
+import { GlobalStyle } from './GlobalStyle'
+import AppRouter from './routes/routes'
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+import { Provider as ReduxProvider } from 'react-redux'
+import { store } from './store'
+
+import { QueryClientProvider } from '@tanstack/react-query'
+import queryClient from 'services/queryClient'
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Profiler onRender={() => null} id="profiler">
-      <GlobalStyle />
-      <AppRouter />
+      <ReduxProvider store={store}>
+        <QueryClientProvider client={queryClient}>
+          <GlobalStyle />
+          <AppRouter />
+        </QueryClientProvider>
+      </ReduxProvider>
     </Profiler>
   </React.StrictMode>
-);
+)

@@ -23,6 +23,8 @@ I created this project with a simple and easy-to-use starting point in mind. It 
 - Prettier
 - React Icons
 
+Features like: absolute imports
+
 ## Making a Copy
 
 Clone this repository with the command below

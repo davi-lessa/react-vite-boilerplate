@@ -4,13 +4,9 @@ import { Container, Content, LeftSide, RightSide } from './styles'
 import { BiStore as Logo } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
-interface HeaderProps {
-  borderColor?: string
-}
-
-const Header: React.FC<HeaderProps> = ({ borderColor }: HeaderProps) => {
+const Header: React.FC = () => {
   return (
-    <Container style={{ borderBottom: `1px solid ${borderColor || '#333'}` }}>
+    <Container>
       <Content>
         <LeftSide>
           <Logo size={24}></Logo>

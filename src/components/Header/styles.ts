@@ -26,5 +26,9 @@ export const Content = styled.div`
   }
 `
 
-export const LeftSide = styled.div``
+export const LeftSide = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const RightSide = styled.div``
