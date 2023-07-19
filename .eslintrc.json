@@ -7,12 +7,23 @@
         "react":{
             "version": "detect"
         },
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
         "import/resolver": {
             "node": {
                 "paths": ["src"],
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
               },
-            "typescript": {}
+            "typescript": {
+              "alwaysTryTypes": true,
+              "project": "./"
+            },
+            "alias": {
+              "map": [
+                ["@", "./src"],
+              ]
+            }
         }
     },
     "extends": [
@@ -36,7 +47,8 @@
     },
     "plugins": [
         "react",
-        "react-hooks" 
+        "react-hooks",
+        "import"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
@@ -49,6 +61,7 @@
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",
         "react/jsx-uses-react": "off",
-        "import/first": "error"
+        "import/first": "error",
+        "import/no-unresolved": "error"
     }
 }

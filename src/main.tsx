@@ -1,15 +1,15 @@
 import React, { Profiler } from 'react'
 import ReactDOM from 'react-dom/client'
 // import './reset.css'
-import './index.css'
-import { GlobalStyle } from './GlobalStyle'
-import AppRouter from './routes/routes'
+import '@/index.css'
+import { GlobalStyle } from '@/GlobalStyle'
+import AppRouter from '@/routes/routes'
 
 import { Provider as ReduxProvider } from 'react-redux'
-import { store } from './store'
+import { store } from '@/store'
 
 import { QueryClientProvider } from '@tanstack/react-query'
-import queryClient from 'services/queryClient'
+import queryClient from '@/services/queryClient'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

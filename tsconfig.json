@@ -18,7 +18,10 @@
     "plugins": [
       {"name": "@styled/typescript-styled-plugin"}
     ],
-    "baseUrl": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
