@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import DashPageModel from '../components/DashPageModel'
+import DashPageModel from '../components/PageModel'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import Account from '../pages/Account'

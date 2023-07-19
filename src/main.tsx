@@ -1,6 +1,7 @@
 import React, { Profiler } from 'react'
 import ReactDOM from 'react-dom/client'
-import './reset.css'
+// import './reset.css'
+import './index.css'
 import { GlobalStyle } from './GlobalStyle'
 import AppRouter from './routes/routes'
 
